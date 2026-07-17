@@ -47,23 +47,18 @@ async function AIResponse(){
   });
   let data = await response.json();
   var result = data.choices[0].message.content;
+  var parsedResults = marked.parse(result);
 
+
+  
     let botMessage = document.createElement("div");
     botMessage.classList.add("bot-message");
     messagesDiv.appendChild(botMessage);
     botMessage.style.marginTop += "50px";
-    botMessage.innerHTML = result;
+    botMessage.innerHTML = parsedResults;
     
   
        }
-
-function onSignIn(googleUser) {
-  var profile = googleUser.getBasicProfile();
-  console.log('ID: ' + profile.getId());
-  console.log('Name: ' + profile.getName());
-  console.log('Image URL: ' + profile.getImageUrl());
-  console.log('Email: ' + profile.getEmail());
-}
 
 loginButton.addEventListener("click", function(){
 blurLoginDiv.style.display = "block";
