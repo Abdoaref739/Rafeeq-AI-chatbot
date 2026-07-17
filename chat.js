@@ -50,6 +50,7 @@ async function AIResponse(){
   var parsedResults = marked.parse(result);
 
 
+
   
     let botMessage = document.createElement("div");
     botMessage.classList.add("bot-message");
@@ -78,11 +79,11 @@ sendIcon.disabled = false;
 isLoggedIn = true;
 });
 
-let increament = 100;
+
 inputField.addEventListener("keydown", function(event){
   if(event.key === "Enter"){
+    event.preventDefault();
     sendData();
-    increament += 200;
-    messagesDiv.scrollIntoView();
+
   }
 });
