@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *{
     margin:0;
     padding:0;
@@ -436,4 +437,444 @@ form > button:hover{
     .steps-section > div > span{
         font-size: 23px;
     }
+=======
+*{
+    margin:0;
+    padding:0;
+}
+@font-face {
+    font-family: "TitleFont";
+    src: url("./fonts/Alien\ AI\ Italic.otf");
+}
+@font-face {
+    font-family: "SecondFont";
+    src: url("./fonts/Modern\ Romance.otf");
+}
+@font-face {
+    font-family: "TitleFont2";
+    src: url("./fonts/AM_Thulth_Regular_0.1.ttf");
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #0a0a0a;
+    overflow-x: hidden;
+}
+.hero-div{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+    width: 100vw;
+    height: 675px;
+}
+#particles-js{
+  position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+.introducing-text{
+    font-size: 90px;
+    font-family: "TitleFont", sans-serif;
+    color: #f5f0e8;
+    z-index: 2;
+}
+.hero-div > span{
+    color: white;
+    font-family: "SecondFont", sans-serif;
+    font-size: 23px;
+    margin-top: 20px;
+}
+.introducing-text > span {
+    color: rgb(255, 87, 25);
+}
+#try-button{
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 42px;
+    padding-right: 42px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: transparent;
+    font-size: 19px;
+    color: #f5f0e8;
+    font-family: "TitleFont", sans-serif;
+    font-weight: 500;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-top: 50px;
+    z-index: 2;
+    cursor: pointer;
+}
+#try-button:hover{
+    transform: scale(101%);
+    transition: 0.7s ease;
+    color: rgb(255, 87, 25);
+    border-color: rgb(255, 87, 25);
+}
+.about-section{
+    width: 100vw;
+    height: 550px;
+    background-color: #0a0a0a;
+}
+.about-section > h2{
+    font-size: 55px;
+    color: white;
+    font-family: "SecondFont", sans-serif;
+    margin-top: 60px;
+    margin-left: 120px;
+}
+.boxes-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 80px;
+}
+.boxes-div > div{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 170px;
+    padding: 20px;
+    box-shadow: 6px 5px 0 white;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-left: 40px;
+    color: white;
+    text-align: justify;
+}
+.boxes-div > div:hover{
+    box-shadow: 4px 4px 0 rgb(255, 87, 25);;
+    transition: 0.7s ease;
+    border-color: rgb(255, 87, 25);
+    color: rgb(255, 87, 25);
+
+}
+.boxes-div > div > i{
+    font-size: 35px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.boxes-div > div > span{
+    font-family: "SecondFont", sans-serif;
+    font-size: 25px;
+    margin-top: 20px;
+}
+.steps-boxes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 70%;
+    height: fit-content;
+    padding: 30px;
+    border: 5px solid white;
+}
+.steps-section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    border-color: transparent;
+}
+.section > h2{
+    font-size: 50px;
+    font-family: "SecondFont", sans-serif;
+    color: white;
+    margin-bottom: 50px;
+}
+.steps-boxes > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    height: 230px;
+    box-shadow: 6px 3px 0 white;
+    border: 3px solid white;
+    margin-top: 70px;
+    border-radius: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 100px;
+}
+.steps-boxes > div> span{
+    color: white;
+    font-family: "SecondFont", sans-serif;
+    font-size: 20px;
+    margin-top: 40px;
+}
+.steps-boxes > div > img{
+    width: 90%;
+    height: auto;
+    margin-top: 30px;
+    border-radius: 30px;
+}
+.timeline{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 150px;
+    margin-top: 50px;
+}
+.line{
+    width: 90%;
+    height: 3px;
+    background-color: white;
+}
+.circle1{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    background-color: #242424;
+    border: 3px solid white;
+    border-radius: 100px;
+   left: 14%;
+   font-size: 25px;
+   color: white;
+   font-family: "SecondFont", sans-serif;
+}
+.circle2{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    background-color: #242424;
+    border: 3px solid white;
+    border-radius: 100px;
+    left: 47%;
+    font-size: 25px;
+   color: white;
+   font-family: "SecondFont", sans-serif;
+}
+.circle3{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   width: 70px;
+    height: 70px;
+    background-color: #242424;
+    border: 3px solid white;
+    border-radius: 100px;
+    left: 80%;
+    font-size: 25px;
+   color: white;
+   font-family: "SecondFont", sans-serif;
+}
+.contact-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 650px;
+    margin-top: 100px;
+}
+
+.plans-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 700px;
+    margin-top: 100px;
+
+}
+.plans-section > h2{
+    color: white;
+    font-family: "SecondFont", sans-serif;
+    font-size: 60px;
+}
+.choices-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 360px;
+    height: 50px;
+    background-color: #0c0c0c;
+    margin-top: 50px;
+    border-radius: 20px;
+}
+.plans-boxes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+.choices-div > button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    color: white;
+    background-color: transparent;
+    font-family: "SecondFont", sans-serif;
+    font-size: 20px;
+    border-color: transparent;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.choices-div > button:hover{
+    background-color: #161616;
+    transition: 0.7s ease;
+}
+.choices-div > button:active{
+    background-color: #0c0c0c;
+}
+
+.plans-boxes > div{
+    width: 33%;
+    height: 100%;
+    background-color: #0c0c0c;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-radius: 10px;
+    color: white;
+    font-family: "SecondFont", sans-serif;
+    border: 3px solid white;
+    padding: 15px;
+}
+.plans-boxes > div > img{
+    width: 80px;
+    height: auto;
+    margin-left: 140px;
+    margin-top: 10px;
+}
+.plans-boxes > div > h2{
+    font-size: 35px;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+.plans-boxes > div > span{
+    font-size: 17px;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+.plans-boxes > div > button{
+    width: 90%;
+    height: 55px;
+    margin-top: 100px;
+    background-color: #161616;
+    border-radius: 10px;
+    color: white;
+    border-color: transparent;
+    font-family: "SecondFont", sans-serif;
+    font-size: 25px;
+    margin-left: 5%;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: fit-content;
+    height: 580px;
+    border: 3px solid white;
+    border-radius: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+form > h2{
+    font-size: 55px;
+    color: white;
+    font-family: "SecondFont", sans-serif;
+    margin-top: 50px;
+}
+form > input{
+    width: 400px;
+    height: 40px;
+    margin-top: 20px;
+    background-color: #0c0c0c;
+    border-color: transparent;
+    border-radius: 10px;
+    padding-left: 20px;
+    font-size: 20px;
+    font-family: "SecondFont", sans-serif;
+    color: white;
+}
+form > textarea{
+    width: 400px;
+    height: 200px;
+    margin-top: 20px;
+    background-color: #0c0c0c;
+    border-color: transparent;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-left: 20px;
+    font-size: 20px;
+    font-family: "SecondFont", sans-serif;
+    color: white;
+    resize: none;
+}
+form > button{
+    width: 430px;
+    height: 50px;
+    margin-top: 20px;
+     background-color: #0c0c0c;
+    border-radius: 10px;
+    font-size: 25px;
+    font-family: "SecondFont", sans-serif;
+    color: white;
+    border: 1px solid white;
+    border-bottom-width: 6px;
+    cursor: pointer;
+}
+form > button:hover{
+    transform: scale(102%);
+    transition: 0.7s ease;
+}
+@media screen and (max-width: 785px){
+    .introducing-text{
+        font-size: 50px;
+    }
+    .hero-div > span{
+        font-size: 18px;
+    }
+    .about-section{
+        height: 1000px;
+    }
+    .about-section > h2{
+        font-size: 40px;
+    }
+    .boxes-div{
+        flex-direction: column;
+    }
+    .boxes-div > div{
+        margin-top: 30px;
+    }
+    .steps-section > div{
+        height: fit-content;
+        padding-bottom: 20px;
+    }
+    .steps-section > div > span{
+        font-size: 23px;
+    }
+>>>>>>> 35e4562047c39a26ebd0794fa6cc331c98214b4d
 }

@@ -54,4 +54,62 @@
     <script src="chat.js"></script>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
 </script>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rafeeq | chat</title>
+    <link rel="stylesheet" href="chat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="google-signin-client_id" content="441990423275-03r26ft4j4e9h33rrrvh5o5ec96o8p67.apps.googleusercontent.com.apps.googleusercontent.com">
+</head>
+<body>
+
+
+    <div id="signin-options">
+        <button id="login-button">Log in</button>
+        <div id="profile-picture-div"></div>
+
+    <div class="color-mode">
+    <i class="fa-solid fa-sun" id="mode-icon" style="display: none;"></i>
+    <i class="fa-solid fa-moon" style="color: rgb(255, 255, 255);" id="mode-icon"></i>
+    </div>
+    </div>
+   
+
+
+    <div id="messages-div">
+        <h1 id="welcome-text">Afternoon, <span id="username-text">user!</span></h1>
+    </div>
+
+
+
+        <div class="input-container">
+        <input type="text" id="input-field" placeholder="Ask whatever u want!">
+        <i class="fa-solid fa-paper-plane" style="color: rgb(255, 255, 255);" id="send-icon"></i>
+        
+            </div>
+            </div>
+
+
+
+<div class="blur-login-div">
+        <div id="login-div">
+            <h1 class="login-div-header">Login to rafeeQ!</h1>
+            <input type="email" id="login-email-field" placeholder="Enter your e-mail">
+            <input type="password" id="login-password-field" placeholder="Enter your password">
+            <button id="login-submit-button">login</button>
+            <div class="g-signin2" data-onsuccess="onSignIn" id="login-google-button"></div>
+        </div>
+</div>
+
+
+
+    </body>
+    <script src="chat.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+</script>
+>>>>>>> 35e4562047c39a26ebd0794fa6cc331c98214b4d
 </html>
