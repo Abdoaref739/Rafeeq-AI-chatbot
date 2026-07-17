@@ -21,6 +21,7 @@ userMessage.classList.add("user-message");
 messagesDiv.appendChild(userMessage);
 userMessage.style.marginTop += "20px";
 userMessage.innerHTML = `<img src="#"><p>${inputField.value}</p>`;
+userMessage.style.background = "linear-gradient(#0f52ba, #003366)";
 AIResponse()
 inputField.value = "";
 }
