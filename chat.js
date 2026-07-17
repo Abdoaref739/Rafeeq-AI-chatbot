@@ -6,7 +6,7 @@ let loginButton = document.getElementById("login-button");
 let blurLoginDiv = document.querySelector(".blur-login-div");
 let loginSubmitButton = document.getElementById("login-submit-button");
 let profilePictureDiv = document.getElementById("profile-picture-div");
-let isLoggedIn = false;
+let isLoggedIn = true;
 
 
 function sendData(){
@@ -82,9 +82,11 @@ sendIcon.disabled = false;
 isLoggedIn = true;
 });
 
-
+let increament = 100;
 inputField.addEventListener("keydown", function(event){
   if(event.key === "Enter"){
-  sendData();
-  }0
+    sendData();
+    increament += 200;
+    messagesDiv.scrollIntoView();
+  }
 });
