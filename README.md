@@ -6,4 +6,4 @@
 3. JS
 4. grog API
 5. FontAwesome
-![Uploading image.png…]()
+<img width="1348" height="674" alt="image" src="https://github.com/user-attachments/assets/923d7eeb-34f6-46d5-aa0c-ae58dfbbb93e" />
