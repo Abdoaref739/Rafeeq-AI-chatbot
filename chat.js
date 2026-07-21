@@ -6,7 +6,7 @@ let loginButton = document.getElementById("login-button");
 let blurLoginDiv = document.querySelector(".blur-login-div");
 let loginSubmitButton = document.getElementById("login-submit-button");
 let profilePictureDiv = document.getElementById("profile-picture-div");
-let isLoggedIn = true;
+let isLoggedIn = false;
 
 
 function sendData(){
@@ -21,7 +21,7 @@ userMessage.classList.add("user-message");
 messagesDiv.appendChild(userMessage);
 userMessage.style.marginTop += "20px";
 userMessage.innerHTML = `<img src="#"><p>${inputField.value}</p>`;
-userMessage.style.background = "linear-gradient(#0f52ba, #003366)";
+userMessage.style.background = "#FE7F2D";
 AIResponse()
 inputField.value = "";
 }
@@ -33,7 +33,7 @@ sendData();
 
 
 async function AIResponse(){
-  const GROQ_API_KEY = "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";
+  const GROQ_API_KEY = "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";
   const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
     method: "POST",
     headers: {
@@ -57,7 +57,7 @@ async function AIResponse(){
     messagesDiv.appendChild(botMessage);
     botMessage.style.marginTop += "50px";
     botMessage.innerHTML = parsedResults;
-    
+    botMessage.style.background = "#233D4D";
   
        }
 
@@ -87,3 +87,14 @@ inputField.addEventListener("keydown", function(event){
 
   }
 });
+
+let moonIcon = document.getElementById("moon-mode-icon");
+let sunIcon = document.getElementById("sun-mode-icon");
+moonIcon.onclick = function(){
+  moonIcon.style.display = "none";
+  sunIcon.style.display = "block";
+}
+sunIcon.onclick = function(){
+  moonIcon.style.display = "block";
+  sunIcon.style.display = "none";
+}

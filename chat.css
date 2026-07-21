@@ -11,7 +11,8 @@
     src: url("./fonts/Makcasa-Regular.ttf");
 }
 body{
-    background-color: #0a0a00;
+    background-color: #000000;
+    color: #EAECF0;
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
@@ -76,6 +77,9 @@ body{
     background-color: rgb(33, 33, 33);
     transition: 0.7s ease;
 }
+#sun-mode-icon{
+    display: none;
+}
 .search-div{
     display: flex;
     justify-content: center;
@@ -98,11 +102,15 @@ body{
     margin-left: 0%;
     z-index: 1000;
 }
+.spoiler-text{
+    font-family: "TextFont",sans-serif;
+    margin-top: 10px;
+}
 #input-field{
     width: 90%;
     height: 40px;
     border: 1px solid transparent;
-    font-family: "TitleFont", sans-serif;
+    font-family: "TextFont", sans-serif;
     font-size: 16px;
     color: white;
     margin-top: 5px;
@@ -134,14 +142,16 @@ body{
     opacity: 0%;
 }
 .user-message{
-    width: 30%;
+    width: fit-content;
     height: fit-content;
     margin-left: 65%;
     color: white;
-    font-family: "TitleFont", sans-serif;
+    font-family: "TextFont", sans-serif;
     background-color: #494949;
     border-radius: 15px;
-    padding: 10px;
+    padding: 15px;
+    padding-left: 50px;
+    padding-right: 150px;
     margin-top: 400px;
 }
 .bot-message{
@@ -149,7 +159,7 @@ body{
     height: fit-content;
     margin-left: 5%;
     color: white;
-    font-family: "TitleFont", sans-serif;
+    font-family: "TextFont", sans-serif;
     background-color: #494949;
     border-radius: 5px;
     padding: 10px;
