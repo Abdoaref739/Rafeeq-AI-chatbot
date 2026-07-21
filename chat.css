@@ -18,6 +18,9 @@ body{
     flex-direction: column;
     align-items: center;
 }
+body::-webkit-scrollbar{
+    display: none;
+}
 #welcome-text{
     margin-top: 10%;
     margin-left: 37%;
