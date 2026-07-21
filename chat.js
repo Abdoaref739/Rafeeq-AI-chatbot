@@ -10,25 +10,25 @@ let isLoggedIn = false;
 
 
 function sendData(){
-if(isLoggedIn === false){
-sendIcon.disabled = true;
-alert("please login first!")
-inputField.value = "";
-}else{
-welcomeText.style.display = "none";
-let userMessage = document.createElement("div");
-userMessage.classList.add("user-message");
-messagesDiv.appendChild(userMessage);
-userMessage.style.marginTop += "20px";
-userMessage.innerHTML = `<img src="#"><p>${inputField.value}</p>`;
-userMessage.style.background = "#FE7F2D";
-AIResponse()
-inputField.value = "";
+  if(isLoggedIn === false){
+    sendIcon.disabled = true;
+    alert("please login first!")
+    inputField.value = "";
+  }else{
+    welcomeText.style.display = "none";
+    let userMessage = document.createElement("div");
+    userMessage.classList.add("user-message");
+    messagesDiv.appendChild(userMessage);
+    userMessage.style.marginTop += "20px";
+    userMessage.innerHTML = `<img src="#"><p>${inputField.value}</p>`;
+    userMessage.style.background = "#FE7F2D";
+  AIResponse()
+  inputField.value = "";
 }
 }
 
 sendIcon.addEventListener("click", function(){
-sendData();
+  sendData();
 });
 
 
@@ -61,22 +61,27 @@ async function AIResponse(){
   
        }
 
+
+
+
 loginButton.addEventListener("click", function(){
 blurLoginDiv.style.display = "block";
 });
 loginSubmitButton.addEventListener("click", function(){
-var email = document.getElementById("login-email-field").value;
+var name = document.getElementById("login-name-field").value;
 var password = document.getElementById("login-password-field").value;
 blurLoginDiv.style.display = "none";
 let signInOptions = {
-    'email': email,
+    'name': name,
     'password': password
 }
+window.localStorage.setItem("name", name);
 console.log(signInOptions)
 loginButton.style.display = "none";
 profilePictureDiv.style.display = "block";
 sendIcon.disabled = false;
 isLoggedIn = true;
+
 });
 
 
@@ -87,6 +92,15 @@ inputField.addEventListener("keydown", function(event){
 
   }
 });
+
+
+
+let usernameText = document.getElementById("username-text");
+usernameText.textContent = window.localStorage.getItem("name");
+
+
+
+
 
 let moonIcon = document.getElementById("moon-mode-icon");
 let sunIcon = document.getElementById("sun-mode-icon");
