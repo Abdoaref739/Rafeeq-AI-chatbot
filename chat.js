@@ -7,6 +7,14 @@ let blurLoginDiv = document.querySelector(".blur-login-div");
 let loginSubmitButton = document.getElementById("login-submit-button");
 let profilePictureDiv = document.getElementById("profile-picture-div");
 let isLoggedIn = false;
+let userMessage;
+let botMessage;
+let darkMode = true;
+let lightMode = false;
+let moonIcon = document.getElementById("moon-mode-icon");
+let sunIcon = document.getElementById("sun-mode-icon");
+let spoilerText = document.querySelector(".spoiler-text");
+let inputContainer = document.querySelector(".input-container");
 
 
 function sendData(){
@@ -16,12 +24,11 @@ function sendData(){
     inputField.value = "";
   }else{
     welcomeText.style.display = "none";
-    let userMessage = document.createElement("div");
+    userMessage = document.createElement("div");
     userMessage.classList.add("user-message");
     messagesDiv.appendChild(userMessage);
     userMessage.style.marginTop += "20px";
     userMessage.innerHTML = `<img src="#"><p>${inputField.value}</p>`;
-    userMessage.style.background = "#FE7F2D";
   AIResponse()
   inputField.value = "";
 }
@@ -49,7 +56,7 @@ async function AIResponse(){
 
 
   
-    let botMessage = document.createElement("div");
+    botMessage = document.createElement("div");
     botMessage.classList.add("bot-message");
     messagesDiv.appendChild(botMessage);
     botMessage.style.marginTop += "50px";
@@ -101,18 +108,6 @@ inputField.addEventListener("keydown", function(event){
 
 
 
-let moonIcon = document.getElementById("moon-mode-icon");
-let sunIcon = document.getElementById("sun-mode-icon");
-
-moonIcon.onclick = function(){
-  moonIcon.style.display = "none";
-  sunIcon.style.display = "block";
-}
-sunIcon.onclick = function(){
-  moonIcon.style.display = "block";
-  sunIcon.style.display = "none";
-}
-
 
 
 
@@ -143,3 +138,54 @@ if(localStorage.getItem("name") == "" || !localStorage.getItem("name")){
   welcomeText.innerHTML = "Welcome,";
 }
 }
+
+
+
+
+
+moonIcon.onclick = function(){
+  sunIcon.style.display = "block";
+  moonIcon.style.display = "none";
+  lightMode = true;
+  darkMode = false;
+if(lightMode && !darkMode){
+  lightModeFunction();
+}
+  
+}
+sunIcon.onclick = function(){
+  moonIcon.style.display = "block";
+  sunIcon.style.display = "none";
+  lightMode = false;
+  darkMode = true;
+if(darkMode){
+  darkModeFunction();
+  }
+}
+
+function lightModeFunction(){
+  sunIcon.style.color = "#000000";
+  welcomeText.style.color = "#000000";
+  spoilerText.style.color = "#000000";
+  inputContainer.style.background = "#dff0f8";
+  inputField.style.color = "#000000";
+  sendIcon.style.color = "#000000";
+  document.body.style.backgroundColor = "#f2f8ff";
+  userMessage.style.background = "#3B82F6";
+  botMessage.style.background = "#1E3A8A";
+}
+
+function darkModeFunction(){
+  moonIcon.style.color = "#ffffff";
+  welcomeText.style.color = "#ffffff";
+  spoilerText.style.color = "#ffffff";
+  inputContainer.style.background = "#2f2e2e";
+  inputField.style.color = "#ffffff";
+  sendIcon.style.color = "#ffffff";
+  document.body.style.backgroundColor = "#020202";
+  userMessage.style.background = "#FE7F2D";
+  botMessage.style.background = "#494949";
+}
+
+
+
