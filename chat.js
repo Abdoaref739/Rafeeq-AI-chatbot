@@ -97,15 +97,9 @@ inputField.addEventListener("keydown", function(event){
 
 
 
-let usernameText = document.getElementById("username-text");
-usernameText.textContent = window.localStorage.getItem("name");
-
-
-
-
-
 let moonIcon = document.getElementById("moon-mode-icon");
 let sunIcon = document.getElementById("sun-mode-icon");
+
 moonIcon.onclick = function(){
   moonIcon.style.display = "none";
   sunIcon.style.display = "block";
@@ -130,14 +124,18 @@ sendIcon.addEventListener("click", function(){
 
 
 window.onload = function(){
+let usernameText = document.getElementById("username-text");
 if(localStorage.getItem("name")){
   loginButton.style.display = "none";
   profilePictureDiv.style.display = "block";
   isLoggedIn = true;
+  welcomeText.innerHTML = "welcome back, ";
+  usernameText.textContent = window.localStorage.getItem("name");
 }
 if(localStorage.getItem("name") == "" || !localStorage.getItem("name")){
   loginButton.style.display = "block";
   profilePictureDiv.style.display = "none";
   isLoggedIn = false;
+  welcomeText.innerHTML = "Welcome,";
 }
 }
