@@ -30,7 +30,7 @@ function sendData(){
 
 
 async function AIResponse(){
-  const GROQ_API_KEY = "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";
+  const GROQ_API_KEY = "https://salting.io/secure/062889c0-37a9-40a6-bd2f-277129da6013";
   const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
     method: "POST",
     headers: {
