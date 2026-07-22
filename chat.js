@@ -27,9 +27,6 @@ function sendData(){
 }
 }
 
-sendIcon.addEventListener("click", function(){
-  sendData();
-});
 
 
 async function AIResponse(){
@@ -77,18 +74,23 @@ let signInOptions = {
 }
 window.localStorage.setItem("name", name);
 console.log(signInOptions)
-loginButton.style.display = "none";
-profilePictureDiv.style.display = "block";
 sendIcon.disabled = false;
 isLoggedIn = true;
 
+
+
 });
+
 
 
 inputField.addEventListener("keydown", function(event){
   if(event.key === "Enter"){
     event.preventDefault();
+    if(isLoggedIn === true){
     sendData();
+    }else{
+      alert("login first")
+    }
 
   }
 });
@@ -111,4 +113,31 @@ moonIcon.onclick = function(){
 sunIcon.onclick = function(){
   moonIcon.style.display = "block";
   sunIcon.style.display = "none";
+}
+
+
+
+
+
+
+sendIcon.addEventListener("click", function(){
+  if(isLoggedIn === true){
+        sendData();
+  }else{
+    alert("login first")
+  }
+});
+
+
+window.onload = function(){
+if(localStorage.getItem("name")){
+  loginButton.style.display = "none";
+  profilePictureDiv.style.display = "block";
+  isLoggedIn = true;
+}
+if(localStorage.getItem("name") == "" || !localStorage.getItem("name")){
+  loginButton.style.display = "block";
+  profilePictureDiv.style.display = "none";
+  isLoggedIn = false;
+}
 }
