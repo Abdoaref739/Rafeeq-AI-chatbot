@@ -30,7 +30,7 @@ function sendData(){
     userMessage.classList.add("user-message");
     messagesDiv.appendChild(userMessage);
     userMessage.style.marginTop += "20px";
-    userMessage.innerHTML = `<img src="#"><p>${inputField.value}</p>`;
+    userMessage.innerHTML = `<img src="./images/profile.png" class="message-profile-image"><p>${inputField.value}</p>`;
   AIResponse()
   inputField.value = "";
 }
