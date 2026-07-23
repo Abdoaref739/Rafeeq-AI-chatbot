@@ -478,6 +478,11 @@ form > button:hover{
         width: 80%;
         height: 200px;
     }
+    .steps-boxes > div > span{
+        margin-top: 60px;
+        font-size: 20px;
+        text-align: center;
+    }
     .plans-boxes{
         display: flex;
         flex-direction: column;
@@ -487,17 +492,20 @@ form > button:hover{
         margin-top: 20px;
     }
     .plans-boxes > div > img{
-        margin-left: 100px;
+        margin-left: 90px;
     }
     .plans-boxes > div > button{
         width: 95%;
         margin-left: 5px;
     }
     .plans-section{
-        margin-top: 500px;
+        margin-top: 650px;
+    }
+    .plans-section > h2{
+        font-size: 45px;
     }
     .contact-section{
-        margin-top: 400px;
+        margin-top: 650px;
     }
     .contact-section > form{
         width: 65%;
@@ -516,5 +524,8 @@ form > button:hover{
     .contact-section > div > button{
         height: 80px;
         margin-top: 20px;
+    }
+    .choices-div{
+        width: 90%;
     }
 }
