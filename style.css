@@ -4,7 +4,7 @@
 }
 @font-face {
     font-family: "TitleFont";
-    src: url("./fonts/Alien\ AI\ Italic.otf");
+    src: url("./fonts/bottix.ttf");
 }
 @font-face {
     font-family: "SecondFont";
@@ -50,7 +50,7 @@ body{
 }
 .hero-div > span{
     color: white;
-    font-family: "SecondFont", sans-serif;
+    font-family: "TitleFont", sans-serif;
     font-size: 23px;
     margin-top: 20px;
 }
@@ -89,7 +89,7 @@ body{
 .about-section > h2{
     font-size: 55px;
     color: white;
-    font-family: "SecondFont", sans-serif;
+    font-family: "TitleFont", sans-serif;
     margin-top: 60px;
     margin-left: 120px;
 }
@@ -106,28 +106,22 @@ body{
     width: 250px;
     height: 170px;
     padding: 20px;
-    box-shadow: 6px 5px 0 white;
+    box-shadow: 0px 10px 0 white;
     border: 2px solid white;
     border-radius: 10px;
     margin-left: 40px;
     color: white;
     text-align: justify;
 }
-.boxes-div > div:hover{
-    box-shadow: 4px 4px 0 rgb(255, 87, 25);;
-    transition: 0.7s ease;
-    border-color: rgb(255, 87, 25);
-    color: rgb(255, 87, 25);
 
-}
 .boxes-div > div > i{
     font-size: 35px;
     margin-top: 10px;
     margin-left: 10px;
 }
 .boxes-div > div > span{
-    font-family: "SecondFont", sans-serif;
-    font-size: 25px;
+    font-family: "TitleFont", sans-serif;
+    font-size: 20px;
     margin-top: 20px;
 }
 .steps-boxes{
@@ -154,7 +148,7 @@ body{
 }
 .section > h2{
     font-size: 50px;
-    font-family: "SecondFont", sans-serif;
+    font-family: "TitleFont", sans-serif;
     color: white;
     margin-bottom: 50px;
 }
@@ -164,7 +158,7 @@ body{
     align-items: center;
     width: 30%;
     height: 230px;
-    box-shadow: 6px 3px 0 white;
+    box-shadow: 0 10px 0 white;
     border: 3px solid white;
     margin-top: 70px;
     border-radius: 30px;
@@ -174,9 +168,9 @@ body{
 }
 .steps-boxes > div> span{
     color: white;
-    font-family: "SecondFont", sans-serif;
+    font-family: "TitleFont", sans-serif;
     font-size: 20px;
-    margin-top: 40px;
+    margin-top: 50px;
 }
 .steps-boxes > div > img{
     width: 90%;
@@ -212,7 +206,7 @@ body{
    left: 14%;
    font-size: 25px;
    color: white;
-   font-family: "SecondFont", sans-serif;
+   font-family: "TitleFont", sans-serif;
 }
 .circle2{
     position: absolute;
@@ -227,7 +221,7 @@ body{
     left: 47%;
     font-size: 25px;
    color: white;
-   font-family: "SecondFont", sans-serif;
+   font-family: "TitleFont", sans-serif;
 }
 .circle3{
     position: absolute;
@@ -242,7 +236,7 @@ body{
     left: 80%;
     font-size: 25px;
    color: white;
-   font-family: "SecondFont", sans-serif;
+   font-family: "TitleFont", sans-serif;
 }
 .contact-section{
     display: flex;
@@ -265,7 +259,7 @@ body{
 }
 .plans-section > h2{
     color: white;
-    font-family: "SecondFont", sans-serif;
+    font-family: "TitleFont", sans-serif;
     font-size: 60px;
 }
 .choices-div{
@@ -275,7 +269,7 @@ body{
     flex-direction: row;
     width: 360px;
     height: 50px;
-    background-color: #0c0c0c;
+    background-color: #272727;
     margin-top: 50px;
     border-radius: 20px;
 }
@@ -295,7 +289,7 @@ body{
     height: 100%;
     color: white;
     background-color: transparent;
-    font-family: "SecondFont", sans-serif;
+    font-family: "TitleFont", sans-serif;
     font-size: 20px;
     border-color: transparent;
     cursor: pointer;
@@ -317,7 +311,7 @@ body{
     margin-right: 30px;
     border-radius: 10px;
     color: white;
-    font-family: "SecondFont", sans-serif;
+    font-family: "TitleFont", sans-serif;
     border: 3px solid white;
     padding: 15px;
 }
@@ -338,18 +332,23 @@ body{
     margin-left: 50px;
 }
 .plans-boxes > div > button{
-    width: 90%;
-    height: 55px;
-    margin-top: 100px;
-    background-color: #161616;
+    width: 300px;
+    height: 60px;
+    margin-top: 50px;
+     background-color: #0c0c0c;
     border-radius: 10px;
-    color: white;
-    border-color: transparent;
-    font-family: "SecondFont", sans-serif;
     font-size: 25px;
-    margin-left: 5%;
+    font-family: "TitleFont", sans-serif;
+    color: white;
+    border: 1px solid white;
+    border-bottom-width: 6px;
+    cursor: pointer;
+    margin-left: 8%;
 }
-
+.plans-boxes > div > button:hover{
+    transform: scale(102%);
+    transition: 0.7s ease;
+}
 form{
     display: flex;
     align-items: center;
@@ -364,7 +363,7 @@ form{
 form > h2{
     font-size: 55px;
     color: white;
-    font-family: "SecondFont", sans-serif;
+    font-family: "TitleFont", sans-serif;
     margin-top: 50px;
 }
 form > input{
@@ -376,7 +375,7 @@ form > input{
     border-radius: 10px;
     padding-left: 20px;
     font-size: 20px;
-    font-family: "SecondFont", sans-serif;
+    font-family: "TitleFont", sans-serif;
     color: white;
 }
 form > textarea{
@@ -389,18 +388,18 @@ form > textarea{
     padding-top: 20px;
     padding-left: 20px;
     font-size: 20px;
-    font-family: "SecondFont", sans-serif;
+    font-family: "TitleFont", sans-serif;
     color: white;
     resize: none;
 }
 form > button{
-    width: 430px;
-    height: 50px;
+    width: 280px;
+    height: 60px;
     margin-top: 20px;
      background-color: #0c0c0c;
     border-radius: 10px;
     font-size: 25px;
-    font-family: "SecondFont", sans-serif;
+    font-family: "TitleFont", sans-serif;
     color: white;
     border: 1px solid white;
     border-bottom-width: 6px;
@@ -435,5 +434,72 @@ form > button:hover{
     }
     .steps-section > div > span{
         font-size: 23px;
+    }
+}
+@media screen and (max-width: 450px){
+    .introducing-text{
+        margin-left: 55px;
+    }
+    .hero-div > span{
+        font-size: 18px;
+        margin-left: 10px;
+    }
+    .about-section > h2{
+        margin-left: 65px;
+    }
+    .boxes-div{
+        margin-top: 10px;
+        margin-right: 50px;
+    }
+    .timeline{
+        margin-top: 120px;
+        margin-right: 20px;
+    }
+    .steps-boxes{
+        display: flex;
+        flex-direction: column;
+    }
+    .steps-boxes > div{
+        width: 80%;
+        height: 200px;
+    }
+    .plans-boxes{
+        display: flex;
+        flex-direction: column;
+    }
+    .plans-boxes > div{
+        width: 70%;
+        margin-top: 20px;
+    }
+    .plans-boxes > div > img{
+        margin-left: 100px;
+    }
+    .plans-boxes > div > button{
+        width: 95%;
+        margin-left: 5px;
+    }
+    .plans-section{
+        margin-top: 500px;
+    }
+    .contact-section{
+        margin-top: 400px;
+    }
+    .contact-section > form{
+        width: 65%;
+    }
+    .contact-section > form > h2{
+        font-size: 40px;
+    }
+    .contact-section > form > input{
+        width: 100%;
+        height: 45px;
+    }
+    .contact-section > form > textarea{
+        width: 100%;
+        height: 150px;
+    }
+    .contact-section > div > button{
+        height: 80px;
+        margin-top: 20px;
     }
 }
