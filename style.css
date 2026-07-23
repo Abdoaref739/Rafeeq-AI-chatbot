@@ -436,7 +436,7 @@ form > button:hover{
         font-size: 23px;
     }
 }
-@media screen and (max-width: 450px){
+@media screen and (max-width: 400px){
     .introducing-text{
         margin-left: 55px;
     }
