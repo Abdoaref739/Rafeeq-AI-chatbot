@@ -252,10 +252,9 @@ body::-webkit-scrollbar{
     height: auto;
     margin-top: 1px;
     margin-left: 1.5px;
-    margin-left: -50px;
 }
 .message-profile-image{
-    width: 20px;
+    width: 25px;
     height: auto;
 }
 .log-out-div{
@@ -324,6 +323,12 @@ body::-webkit-scrollbar{
         margin-right: 50px;
     }
     .user-message{
-        margin-left: 50%;
+        width: 30%;
+        margin-left: 25%;
+        border-radius: 30px;
+    }
+    .bot-message{
+        width: 50%;
+        border-radius: 30px;
     }
 }
