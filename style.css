@@ -437,6 +437,9 @@ form > button:hover{
     }
 }
 @media screen and (max-width: 400px){
+    body{
+        overflow-x: hidden;
+    }
     .introducing-text{
         margin-left: 55px;
     }
@@ -454,6 +457,18 @@ form > button:hover{
     .timeline{
         margin-top: 120px;
         margin-right: 20px;
+    }
+    .line{
+        margin-left: 12px;
+    }
+    .circle1{
+        margin-left: -20px;
+    }
+    .circle2{
+        margin-left: -20px;
+    }
+    .circle3{
+        margin-left: -20px;
     }
     .steps-boxes{
         display: flex;
