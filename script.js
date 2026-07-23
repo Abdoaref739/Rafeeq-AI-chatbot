@@ -17,6 +17,15 @@ submitBtn.onclick = function(event){
     email: document.getElementById("form-email-field").value,
     message: document.getElementById("form-message-field").value
 }
-    console.log(values)
-    emailjs.send("service_4u8zqjp", "template_aokp6xc", values);
+
+    let responseMessage = document.querySelector(".response-message");
+    emailjs.send("service_4u8zqjp", "template_aokp6xc", values).then((res) =>{
+        responseMessage.classList.add("green-response");
+        responseMessage.classList.remove("red-response");
+        responseMessage.innerHTML = "Message sent successfully!! :)";
+    }).catch((err) =>{
+        responseMessage.classList.add("red-response");
+        responseMessage.classList.remove("green-response");
+        responseMessage.innerHTML = "There is an error, try again later :(";
+    })
 }
