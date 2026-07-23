@@ -85,6 +85,7 @@ let signInOptions = {
     'password': password
 }
 window.localStorage.setItem("name", name);
+window.localStorage.setItem("password", password);
 console.log(signInOptions)
 sendIcon.disabled = false;
 isLoggedIn = true;
@@ -126,13 +127,13 @@ sendIcon.addEventListener("click", function(){
 
 window.onload = function(){
 let usernameText = document.getElementById("username-text");
-if(localStorage.getItem("name")){
+if(localStorage.getItem("name") && localStorage.getItem("password")){
   loginButton.style.display = "none";
   profilePictureDiv.style.display = "block";
   isLoggedIn = true;
   welcomeText.innerHTML = `welcome back,  &nbsp; <i>${localStorage.getItem("name")}</i>`;
 }
-if(localStorage.getItem("name") == "" || !localStorage.getItem("name")){
+if(localStorage.getItem("name") == "" || !localStorage.getItem("name") && localStorage.getItem("password") == "" || !localStorage.getItem("password")){
   loginButton.style.display = "block";
   profilePictureDiv.style.display = "none";
   isLoggedIn = false;
