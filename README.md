@@ -5,5 +5,12 @@
 2. CSS
 3. JS
 4. grog API
-5. FontAwesome
-<img width="1348" height="674" alt="image" src="https://github.com/user-attachments/assets/923d7eeb-34f6-46d5-aa0c-ae58dfbbb93e" />
+5. email.js
+6. particles.js
+7. FontAwesomef
+<img width="1346" height="687" alt="Screenshot 2026-07-23 131124" src="https://github.com/user-attachments/assets/db6f461a-823b-4afe-a2c8-3e5f63be8f41" />
+<img width="1359" height="684" alt="Screenshot 2026-07-23 131329" src="https://github.com/user-attachments/assets/6aca3b83-3714-4ce0-83af-76e747291206" />
+<img width="1330" height="679" alt="image" src="https://github.com/user-attachments/assets/a9e97b21-029e-4e0e-8905-5b134e996141" />
+<img width="1363" height="687" alt="image" src="https://github.com/user-attachments/assets/7b0cf907-7991-4663-af81-a425bbb930aa" />
+<img width="1359" height="686" alt="image" src="https://github.com/user-attachments/assets/fa3f597d-b5a0-4fe9-a9b0-41e0a80bcfe1" />
+
