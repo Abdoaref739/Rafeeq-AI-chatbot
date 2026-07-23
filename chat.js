@@ -1,4 +1,5 @@
 let sendIcon = document.getElementById("send-icon");
+let plusIcon = document.getElementById("plus-icon");
 let messagesDiv = document.getElementById("messages-div");
 let inputField = document.getElementById("input-field");
 let welcomeText = document.getElementById("welcome-text");
@@ -15,6 +16,7 @@ let moonIcon = document.getElementById("moon-mode-icon");
 let sunIcon = document.getElementById("sun-mode-icon");
 let spoilerText = document.querySelector(".spoiler-text");
 let inputContainer = document.querySelector(".input-container");
+let logOutBtn = document.querySelector(".log-out-div");
 
 
 function sendData(){
@@ -61,8 +63,7 @@ async function AIResponse(){
     messagesDiv.appendChild(botMessage);
     botMessage.style.marginTop += "50px";
     botMessage.innerHTML = parsedResults;
-    botMessage.style.background = "#233D4D";
-    botMessage.style.paddingLeft = "30px";
+    botMessage.style.paddingLeft = "25px";
     botMessage.style.paddingTop = "20px";
     botMessage.style.paddingRight = "20px";
     botMessage.style.paddingBottom = "20px";
@@ -87,6 +88,7 @@ window.localStorage.setItem("name", name);
 console.log(signInOptions)
 sendIcon.disabled = false;
 isLoggedIn = true;
+window.location.reload();
 
 
 
@@ -128,14 +130,13 @@ if(localStorage.getItem("name")){
   loginButton.style.display = "none";
   profilePictureDiv.style.display = "block";
   isLoggedIn = true;
-  welcomeText.innerHTML = "welcome back, ";
-  usernameText.textContent = window.localStorage.getItem("name");
+  welcomeText.innerHTML = `welcome back,  &nbsp; <i>${localStorage.getItem("name")}</i>`;
 }
 if(localStorage.getItem("name") == "" || !localStorage.getItem("name")){
   loginButton.style.display = "block";
   profilePictureDiv.style.display = "none";
   isLoggedIn = false;
-  welcomeText.innerHTML = "Welcome,";
+  welcomeText.innerHTML = `welcome, user!`;
 }
 }
 
@@ -167,9 +168,11 @@ function lightModeFunction(){
   sunIcon.style.color = "#000000";
   welcomeText.style.color = "#000000";
   spoilerText.style.color = "#000000";
+  plusIcon.style.color = "#000000";
   inputContainer.style.background = "#dff0f8";
   inputField.style.color = "#000000";
   sendIcon.style.color = "#000000";
+  logOutBtn.style.background = "#000000";
   document.body.style.backgroundColor = "#f2f8ff";
   userMessage.style.background = "#3B82F6";
   botMessage.style.background = "#1E3A8A";
@@ -179,6 +182,7 @@ function darkModeFunction(){
   moonIcon.style.color = "#ffffff";
   welcomeText.style.color = "#ffffff";
   spoilerText.style.color = "#ffffff";
+  plusIcon.style.color = "#ffffff";
   inputContainer.style.background = "#2f2e2e";
   inputField.style.color = "#ffffff";
   sendIcon.style.color = "#ffffff";
@@ -189,3 +193,14 @@ function darkModeFunction(){
 
 
 
+logOutBtn.addEventListener("click", function(){
+  localStorage.removeItem("name");
+  window.location.reload();
+});
+profilePictureDiv.addEventListener("click", function(){
+  if(logOutBtn.style.display === "none"){
+    logOutBtn.style.display = "block";
+  }else{
+    logOutBtn.style.display = "none";
+  }
+});
