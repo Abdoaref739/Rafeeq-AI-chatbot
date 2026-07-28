@@ -1,4 +1,3 @@
-require("dotenv").config();
 let sendIcon = document.getElementById("send-icon");
 let plusIcon = document.getElementById("plus-icon");
 let messagesDiv = document.getElementById("messages-div");
@@ -37,7 +36,7 @@ function sendData(){
 }
 }
 async function AIResponse(){
-  const GROQ_API_KEY = process.env.API_KEY;
+  const GROQ_API_KEY = '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';
   const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
     method: "POST",
     headers: {
