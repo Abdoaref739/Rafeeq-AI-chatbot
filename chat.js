@@ -37,7 +37,7 @@ function sendData(){
 }
 
 
-
+require("dotenv").config();
 async function AIResponse(){
   const GROQ_API_KEY = process.env.API_KEY;
   const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
