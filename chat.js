@@ -36,7 +36,7 @@ function sendData(){
 }
 }
 async function AIResponse(){
-  const GROQ_API_KEY = API_KEY;;
+  const GROQ_API_KEY = "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";
   const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
     method: "POST",
     headers: {
